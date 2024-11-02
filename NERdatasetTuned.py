@@ -1,14 +1,13 @@
 import os
-import random
 import torch
 from transformers import AutoTokenizer, AutoModelForTokenClassification, Trainer, TrainingArguments
-from datasets import load_dataset, DatasetDict, Dataset
+from datasets import DatasetDict, Dataset
 from seqeval.metrics import classification_report
 import numpy as np
 import json
 
 # Dataset name variable
-DATASET_NAME = "s800"
+DATASET_NAME = "NewData"
 
 # Define dataset paths based on the dataset name
 train_dataset_path = f"./Datasets/{DATASET_NAME}/train.txt"
@@ -113,10 +112,10 @@ if not os.path.exists(evaluation_results_dir):
 # Training arguments
 training_args = TrainingArguments(
     output_dir=finetuned_model_dir,  # output directory
-    eval_strategy="epoch",
+    evaluation_strategy="epoch",
     learning_rate=5e-5,
     per_device_train_batch_size=32,
-    num_train_epochs=1,
+    num_train_epochs=20,
     weight_decay=0.01,
     logging_dir='./logs',
     logging_steps=10,

@@ -1,5 +1,6 @@
+seqeval
 transformers==4.10.0
-datasets==1.11.0
+datasets==2.21.0
 numpy==1.21.0
 torch==1.9.0
 accelerate>=0.5.1
