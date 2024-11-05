@@ -21,7 +21,7 @@ This project attempts to reproduce the fine-tuning of BioBERT v1.1 for the task 
 - BioBERTDatasetFinetuning.py: Script to fine-tune BioBERT on NER datasets.
 
 ### Development Environment
--.devcontainer: Configures a development container to run the project in a reproducible environment using VSCode. The container installs necessary Python libraries and uses Docker to ensure consistency.
+- **devcontainer.json**: Configures a development container to run the project in a reproducible environment using VSCode. The container installs necessary Python libraries and uses Docker to ensure consistency.
 - **Dockerfile**: It sets up the development container with Python 3.9, the necessary dependencies such as PyTorch, and all other required libraries.
 - **requirements.txt**: Lists all Python dependencies required for the project.
 
