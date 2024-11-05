@@ -94,9 +94,13 @@ Use `BioBERTDatasetFinetuning.py` with a structured dataset to fine-tune BioBERT
 - The **GeneratedData** dataset is not suited for practical application as the generation technique is simplistic and does not have realistic context associated with it. 
 - No plans to extend the project further, as the goal was focussed on reproducing results and testing new datasets. 
 
-## References - BioBERT is realized via the **Hugging Face Transformers** library. 
+References
 
-- Got the original datasets from the GitHub page of **BioBBC**, which did a similar study. 
+- BioBERT is implemented using the Hugging Face Transformers library.
+
+- Original datasets were obtained from the GitHub page of BioBBC, which conducted similar research.
+
+- BioBERT: A pre-trained biomedical language representation model for biomedical text mining. Jinhyuk Lee, Wonjin Yoon, Sungdong Kim, Donghyeon Kim, Sunkyu Kim, Chan Ho So, Jaewoo Kang. Available at: https://doi.org/10.1093/bioinformatics/btz682.
 
 ## Contributors 
 
