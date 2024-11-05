@@ -5,15 +5,22 @@
 This project attempts to reproduce the fine-tuning of BioBERT v1.1 for the task of Named Entity Recognition. This involves applying BioBERT over a range of biomedical datasets, including original datasets used in the BioBERT paper and new datasets crafted for this project. The main purpose is to try to validate the results from the original BioBERT study and see if the same results can be achieved using newly crafted datasets.
 ## Project Structure
 
-### Files and Directories
-- **Datasets**: This folder contains two subfolders:
-- **OriginalDatasets**: Includes the seven datasets originally used in the BioBERT paper for benchmarking NER capabilities. Each dataset is in BIO format and tagged with a single entity type.
-- **NewDataSets**: Includes five newly created datasets using different methods.
-- **GeneratedData**: A dataset with 30,000 sentences, generated using a set of 200 entity-free sentences and 200 sentences with random entities. This is meant for experimental purposes only.
-- **Compiled-Disease**: Integrates BC5CDR-Disease and NCBI-Disease datasets.
-- **Compiled-Multi**: Compiled a portion of all the raw datasets together and included all the available entity tags.
-- **Scraped-Disease**: Contains roughly half of the scraped epigenetic abstracts annotated with entity label "Disease".
-- **Scraped-Multi**: The 1,500 scraped epigenetic abstracts formatted to BIO and annotated with Chemical, Species, Gene and Disease entities.
+- **Datasets**: This directory contains two subfolders:
+  - **OriginalDatasets**: Includes the nine datasets originally used in the BioBERT paper for benchmarking NER capabilities. Each dataset is in BIO format, tagged with a single entity type.
+    - **NCBI Disease**: Focuses on Disease entities.
+    - **2010 i2b2/VA**: Includes Disease entities, derived from clinical data.
+    - **BC5CDR**: Contains Disease and Chemical entities, split into separate datasets for each entity type.
+    - **BC4CHEMD**: Focuses on Chemical entities.
+    - **BC2GM**: Contains Gene entities.
+    - **JNLPBA**: Focuses on Protein entities.
+    - **LINNAEUS**: Contains Species entities.
+    - **Species-800**: Focuses on Species entities.
+  - **NewDataSets**: Contains five newly created datasets using various techniques.
+    - **GeneratedData**: A dataset of 30,000 sentences generated from a pool of 200 entity-free sentences and 200 sentences with random entities. It is meant for experimental purposes.
+    - **Compiled-Disease**: Combines BC5CDR-Disease and NCBI-Disease datasets.
+    - **Compiled-Multi**: Combines a fraction of all the original datasets and incorporates all entity tags present.
+    - **Scraped-Disease**: Contains approximately half of the scraped epigenetic abstracts annotated with the "Disease" entity label.
+    - **Scraped-Multi**: The 1,500 scraped epigenetic abstracts formatted to BIO and annotated with Chemical, Species, Gene, and Disease entities.
 
 - **NewDataScrapeGenerator**: Scripts for generating new datasets.
 - **NewDataScrape.py**: Scrapes abstracts of PubMed articles based on specified search terms.
