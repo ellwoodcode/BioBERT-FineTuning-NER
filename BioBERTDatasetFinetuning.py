@@ -7,7 +7,7 @@ import numpy as np
 import json
 
 # Dataset name variable
-DATASET_NAME = "NewData"
+DATASET_NAME = "DatasetFolder/DatasetName"
 
 # Define dataset paths based on the dataset name
 train_dataset_path = f"./Datasets/{DATASET_NAME}/train.txt"
@@ -167,7 +167,6 @@ with open(evaluation_file_path, "w") as eval_file:
 print(f"Test evaluation results have been saved to {evaluation_file_path}")
 
 # Calculate F1, Precision, and Recall using seqeval
-# Define a function for extracting predictions and labels for metrics calculation
 def compute_metrics(pred):
     predictions, labels = pred
     predictions = np.argmax(predictions, axis=2)
